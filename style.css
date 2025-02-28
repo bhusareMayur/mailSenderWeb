@@ -75,7 +75,7 @@ html, body {
 
 /* --------Main-------- */
 .main-container {
-    display: flex;
+    display: inline-block;
     width: 100%;
     margin-top: 4rem;
     height: 80%;
@@ -89,14 +89,7 @@ html, body {
     position: fixed;
     
 }
-.main{
-    width: 80%;
-    background-color: #90E0EF;
-    border-radius: 2rem;
-    height: 100%;
-    margin-left: 21%;
-    padding: 1rem;
-}
+
 .profile-pic {
     display: flex;
     justify-content: center;
@@ -113,7 +106,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
   }
   .options .option{
@@ -135,6 +128,34 @@ html, body {
         opacity: 1;
     }
 
+    /*  code for main  */
+    .main{
+        width: 80%;
+        background-color: #90E0EF;
+        border-radius: 2rem;
+        height: 100%;
+        margin-left: 21.5%;
+        margin-right: 0;
+        padding: 1rem;
+    }
+    .inputs{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .email {
+        justify-content: center;
+        align-items: center;
+       
+        width:  50% ;
+    }
+.input-group{
+    width: 50%;
+}
 /* --------Footer-------- */
 .footer {
     display: flex;
@@ -144,10 +165,10 @@ html, body {
     width: 100%;
     /* height: 20%; */
     bottom: 0;
-    /* height: 15rem; */
+    height: 5rem;
     background-color: #00B4D8;
     color: black;
-    /* position: fixed; */
+    position: fixed;
     overflow: auto;
     padding: 2rem;
 
