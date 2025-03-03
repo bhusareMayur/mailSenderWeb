@@ -40,11 +40,22 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
-
+.logo .img-logo{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* border: 5px solid #0077B6; */
+  border: 0.25rem solid #0077B6;
+  /* background-color: #90E0EF; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .logo i {
   font-size: 24px;
   color: #0077B6;
-  margin-right: 10px;
+  margin-right: 5px;
+
 }
 
 .logo h1 {

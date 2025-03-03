@@ -38,10 +38,10 @@ html, body {
     padding-left: 1.5rem;
 }
 .nav-logo .logo i {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-top: 0.45rem;
     flex: 1;
-    padding-left: 0.13rem;
+    padding-left: 0.3rem;
 }
 .logo {
     width: 3.5rem;
