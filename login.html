@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mail Sender</title>
+    <link rel="stylesheet" href="login-signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="logo">
+                <i class="fas fa-paper-plane"></i>
+                <h1>Mail Sender</h1>
+            </div>
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-key"></i>
+                        <input type="text" id="otp" placeholder="OTP" required>
+                        <button type="button" class="otp-btn">Get OTP</button>
+                    </div>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <div class="switch-form">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+        </div>
+        <div class="animation-container">
+            <div class="envelope">
+                <div class="envelope-back"></div>
+                <div class="letter">
+                    <div class="letter-content"></div>
+                </div>
+                <div class="envelope-front"></div>
+                <div class="envelope-top"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

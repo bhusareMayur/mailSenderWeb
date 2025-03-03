@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Mail Sender</title>
+    <link rel="stylesheet" href="login-signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container signup-container">
+            <div class="logo">
+                <i class="fas fa-paper-plane"></i>
+                <h1>Mail Sender</h1>
+            </div>
+            <h2>Create an Account</h2>
+            <form id="signup-form">
+                <div class="input-group">
+                    <div class="name-fields">
+                        <div class="input-field half">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="firstName" placeholder="First Name" required>
+                        </div>
+                        <div class="input-field half">
+                            <input type="text" id="lastName" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-key"></i>
+                        <input type="text" id="otp" placeholder="OTP" required>
+                        <button type="button" class="otp-btn">Get OTP</button>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                </div>
+                <div class="terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+            <div class="switch-form">
+                <p>Already have an account? <a href="index.html">Login</a></p>
+            </div>
+        </div>
+        <div class="animation-container">
+            <div class="messages">
+                <div class="message" id="msg1">
+                    <div class="message-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="message-body"></div>
+                </div>
+                <div class="message" id="msg2">
+                    <div class="message-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="message-body"></div>
+                </div>
+                <div class="message" id="msg3">
+                    <div class="message-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="message-body"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
