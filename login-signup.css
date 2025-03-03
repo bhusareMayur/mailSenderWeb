@@ -45,7 +45,7 @@ body {
   height: 50px;
   border-radius: 50%;
   /* border: 5px solid #0077B6; */
-  border: 0.25rem solid #0077B6;
+  border: 0.2rem solid #0077B6;
   /* background-color: #90E0EF; */
   display: flex;
   justify-content: center;
@@ -55,14 +55,18 @@ body {
   font-size: 24px;
   color: #0077B6;
   margin-right: 5px;
+  /* margin-left: 2px; */
 
 }
 
 .logo h1 {
   font-size: 24px;
   color: #0077B6;
+  margin-left: 4px;
 }
-
+.img-logo:hover{
+  transform: scale(1.1) rotate(15deg);
+}
 h2 {
   color: #333;
   margin-bottom: 30px;

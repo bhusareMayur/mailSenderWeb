@@ -1,175 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="style.css">
-        <title>Auto mail sender</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Auto Mail Sender</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav-container">
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <div class="logo"><i class="fa-solid fa-paper-plane"></i></div>
+                <h1>Auto Mail Sender</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="login.html">Login/Signup</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="expand"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </div>
 
-        <div class="nav-container">
-            <div class="nav-bar">
-                <div class="nav-logo">
-                    <div class="logo"><i
-                            class="fa-solid fa-paper-plane"></i></div>
-                    <h1>Auto mail sender</h1>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="side-bar">
+            <div class="profile">
+                <div class="profile-pic">
+                    <img src="profile.jpg" alt="profile-pic">
                 </div>
-                <div class="nav-space"></div>
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="#about">About</a>
-                    <a href="login.html">Login/signup</a>
-                    <a href="#contact">Contact</a>
+                <div class="profile-name">Mayur Bhusare</div>
+                <div class="options">
+                    <div class="option active"><a href="#dashboard">Dashboard</a></div>
+                    <div class="option"><a href="#compose">Compose</a></div>
+                    <div class="option"><a href="#sent">Sent</a></div>
+                    <div class="option"><a href="#draft">Draft</a></div>
+                    <div class="option"><a href="#trash">Trash</a></div>
                 </div>
-                <div class="expand"><i class="fa-solid fa-grip-lines"></i></div>
             </div>
         </div>
-        <div class="main-container">
-            <div class="side-bar">
-                <div class="profile">
-                    <div class="profile-pic">
-                        <img src="profile.jpg" alt="profile-pic">
+
+        <!-- Main Content -->
+        <div class="main">
+            <form action="#action" id="mail-id">
+                <div class="inputs">
+                    <div class="input-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your Email">
                     </div>
-                    <div class="profile-name">Mayur Bhusare</div>
-                    <div class="options">
-                        <div class="option active"><a
-                                href="#dashboard">Dashboard</a></div>
-                        <div class="option"><a href="#compose">Compose</a></div>
-                        <div class="option"><a href="#sent">Sent</a></div>
-                        <div class="option"><a href="#draft">Draft</a></div>
-                        <div class="option"><a href="#trash">Trash</a></div>
+                    
+                    <div class="note">
+                        <h6>Note: File should be in CSV format and first row should contain Rname, Cname, Rmail, pos</h6>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="file">Upload CSV File</label>
+                        <div class="file-input">
+                            <input type="file" id="file" class="form-control">
+                            <label for="file" class="file-label">Choose File</label>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="draft">Mail Draft</label>
+                        <textarea id="draft" class="form-control" placeholder="Enter your mail draft here..."></textarea>
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary">Preview Mail</button>
+                </div>
+            </form>
+            
+            <div class="info">
+                <p>After filling all necessary inputs and clicking on the Preview button, you will see your sample mail here. Review it and click the Send button to send your emails.</p>
+                
+                <div class="draft-mail">
+                    <h3>Sample Mail</h3>
+                    <div class="mail">
+                        <div class="mail-header">
+                            <div class="mail-from">From: Mayur Bhusare</div>
+                            <div class="mail-to">To: xyz@company.com</div>
+                            <div class="mail-date">Date: 01/03/2025</div>
+                        </div>
+                        <div class="subject">
+                            <h4>Subject: Regarding placement</h4>
+                        </div>
+                        <div class="mail-body">
+                            <p>Dear ${Rname},</p>
+                            <p>My name is Mayur Shankar Bhusare, and I am currently a student with hands-on experience in various projects, which are detailed in my resume. I noticed that your company, <b>${Cname}</b>, is seeking a <b>${pos}</b>, and I am eager to express my interest in this role.</p>
+                            <p>Here's a quick overview of my profile:</p>
+                            <ul>
+                                <li>Proficient in developing projects independently, demonstrating my understanding of key concepts.</li>
+                                <li>Focused on improving my practical knowledge through self-initiated projects.</li>
+                            </ul>
+                            <p>For more details, please check:</p>
+                            <ul>
+                                <li><b><a href="#resume">My Resume</a></b></li>
+                                <li><b><a href="#profile">LinkedIn Profile</a></b></li>
+                                <li><b><a href="#portfolio">My Portfolio</a></b></li>
+                            </ul>
+                            <p>Thank you for considering my application. I am looking forward to the possibility of discussing how my skills and passion align with the requirements of the ${pos} role at ${Cname}.</p>
+                            <p>Best regards,<br>
+                                <b>Mayur Shankar Bhusare</b><br>
+                                <b>Contact No:</b> 8262802168</p>
+                        </div>
+                    </div>
+                    <div class="send">
+                        <button type="button" class="btn btn-primary">Send Emails</button>
                     </div>
                 </div>
             </div>
-            <div class="main">
-                <form action="#action" id="mail-id">
-                    <div class="inputs">
-
-                        <div class="input-group mb-3">
-                            <input type="email" class="form-control"
-                                placeholder="Enter your Email"
-                                aria-label="Enter your Email"
-                                aria-describedby="basic-addon2">
-                            <span class="input-group-text"
-                                id="basic-addon2">example@123.edu.in</span>
+             <!-- Main Container -->
+     <!-- <div class="main-container2"> -->
+        <div class="main2"> 
+            <!-- Dashboard Section -->
+            <div class="section" id="dashboard-section">
+                <h2>Dashboard</h2>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Emails</h3>
+                            <p class="stat-number">248</p>
                         </div>
-                        <h6>Note : file should be in csv formate and file first
-                            row conatains Rname , Cname , Rmail , pos</h6>
-                        <div class="input-group mb-3">
-                            <input type="file" class="form-control"
-                                id="inputGroupFile02">
-                            <label class="input-group-text"
-                                for="inputGroupFile02">Upload</label>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-paper-plane"></i></div>
+                        <div class="stat-info">
+                            <h3>Sent</h3>
+                            <p class="stat-number">187</p>
                         </div>
-
-                        <div class="input-group draft">
-                            <span class="input-group-text">Enter mail
-                                Draft</span>
-                            <textarea class="form-control"
-                                aria-label="With textarea"></textarea>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-clipboard"></i></div>
+                        <div class="stat-info">
+                            <h3>Draft</h3>
+                            <p class="stat-number">42</p>
                         </div>
-                        <br>
-                        <button type="button"
-                            class="btn btn-primary">submit</button>
-                    </form>
-                    <div class="info">
-                        <p>After filling all necessory inputes and clicking on
-                            submiot button you will see your sample mail here
-                            so fill it and click on submit buttton after one
-                            more button will appear here that is to send button
-                        </p>
-                        <div class="draft-mail">
-                            <h3>Sample mail</h3>
-                            <div class="mail">
-                                <div class="mail-header">
-                                    <div class="mail-from">From: Mayur
-                                        Bhusare</div>
-                                    <div class="mail-to">To:xyz.edu.in</div>
-                                    <div class="mail-date">Date:
-                                        01/03/2025</div>
-                                </div>
-                                <div class="subject">
-                                    <h4>Subject: Regarding placement</h4>
-                                </div>
-                                <div class="mail-body">
-                                    <p>Dear ${Rname},</p>
-                                    <p>My name is Mayur Shankar Bhusare, and I
-                                        am currently a student with hands-on
-                                        experience in various projects, which
-                                        are detailed in my resume. I noticed
-                                        that your company, <b>${Cname}</b>, is
-                                        seeking a <b>${pos}</b>, and I am eager
-                                        to express my interest in this role.</p>
-                                    <p>Here's a quick overview of my profile:
-                                        <ul>
-                                            <li>Proficient in developing
-                                                projects independently,
-                                                demonstrating my understanding
-                                                of key concepts.</li>
-                                            <li>Focused on improving my
-                                                practical knowledge through
-                                                self-initiated projects.</li>
-                                        </ul>
-                                    </p>
-                                    <p>For more details, please check:
-                                        <ul>
-                                            <li><b><a
-                                                        href="#resume">My
-                                                        Resume</a></b></li>
-                                            <li><b><a
-                                                        href="#profile">LinkedIn
-                                                        Profile</a></b></li>
-                                            <li><b><a
-                                                        href="#portfolio">My
-                                                        Portfolio</a></b></li>
-                                        </ul>
-                                    </p>
-                                    <p>Thank you for considering my application.
-                                        I am looking forward to the possibility
-                                        of discussing how my skills and passion
-                                        align with the requirements of the
-                                        ${pos} role at ${Cname}.</p>
-                                    <p>Best regards,<br>
-                                        <b>Mayur Shankar Bhusare</b><br>
-                                        <b>Contact No:</b> 8262802168</p>
-                                </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-trash"></i></div>
+                        <div class="stat-info">
+                            <h3>Trash</h3>
+                            <p class="stat-number">19</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-paper-plane"></i></div>
+                            <div class="activity-info">
+                                <p class="activity-title">Sent bulk emails to TechCorp</p>
+                                <p class="activity-time">Today, 10:45 AM</p>
                             </div>
-                            <br><br>
-                            <div class="send"><button type="button"
-                                class="btn btn-primary">Send</button></div>
-                            
-                            <br><br><br><br>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-file"></i></div>
+                            <div class="activity-info">
+                                <p class="activity-title">Created new template: Job Application</p>
+                                <p class="activity-time">Yesterday, 3:22 PM</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-upload"></i></div>
+                            <div class="activity-info">
+                                <p class="activity-title">Uploaded new contacts CSV</p>
+                                <p class="activity-time">Mar 01, 2025, 9:15 AM</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-                <!-- <hr> -->
-                <div class="footer">
-                    <div class="footer-content">
-                        Made with <img src="heart.svg" alt="heart" /> by
-                        <span>Mayur</span>
+            
+            <!-- Compose Section -->
+            <div class="section hidden" id="compose-section">
+                <h2>Compose Email</h2>
+                <form action="#" class="compose-form">
+                    <div class="input-group">
+                        <label for="to-email">To:</label>
+                        <input type="email" id="to-email" class="form-control" placeholder="Enter recipient email or upload CSV">
                     </div>
-                    <div class="footer-bottom">
-                        <p>©2025 | All rights reserved</p>
-
+                    
+                    <div class="input-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" class="form-control" placeholder="Enter subject">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" class="form-control" placeholder="Compose your message here..."></textarea>
+                    </div>
+                    
+                    <div class="template-variables">
+                        <h4>Available Variables</h4>
+                        <div class="variables-list">
+                            <span class="variable">${Rname}</span>
+                            <span class="variable">${Cname}</span>
+                            <span class="variable">${Rmail}</span>
+                            <span class="variable">${pos}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary">Save Draft</button>
+                        <button type="button" class="btn btn-primary">Send</button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Sent Section -->
+            <div class="section hidden" id="sent-section">
+                <h2>Sent Emails</h2>
+                <div class="email-list">
+                    <div class="email-item">
+                        <div class="email-checkbox">
+                            <input type="checkbox" id="email1">
+                        </div>
+                        <div class="email-info">
+                            <p class="email-recipient">TechCorp Recruitment Team (25 recipients)</p>
+                            <p class="email-subject">Job Application: Software Developer Position</p>
+                            <p class="email-preview">My name is Mayur Shankar Bhusare, and I am currently a student with hands-on experience...</p>
+                        </div>
+                        <div class="email-date">Mar 03, 2025</div>
+                    </div>
+                    
+                    <div class="email-item">
+                        <div class="email-checkbox">
+                            <input type="checkbox" id="email2">
+                        </div>
+                        <div class="email-info">
+                            <p class="email-recipient">InnovateTech HR (18 recipients)</p>
+                            <p class="email-subject">Application for Frontend Developer Role</p>
+                            <p class="email-preview">I noticed that your company is seeking a Frontend Developer, and I am eager to express...</p>
+                        </div>
+                        <div class="email-date">Feb 28, 2025</div>
+                    </div>
+                    
+                    <div class="email-item">
+                        <div class="email-checkbox">
+                            <input type="checkbox" id="email3">
+                        </div>
+                        <div class="email-info">
+                            <p class="email-recipient">GlobalSoft Hiring Manager (12 recipients)</p>
+                            <p class="email-subject">Interest in Backend Developer Position</p>
+                            <p class="email-preview">I am writing to express my interest in the Backend Developer position at GlobalSoft...</p>
+                        </div>
+                        <div class="email-date">Feb 25, 2025</div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Draft Section -->
+            <div class="section hidden" id="draft-section">
+                <h2>Draft Emails</h2>
+                <div class="email-list">
+                    <div class="email-item">
+                        <div class="email-checkbox">
+                            <input type="checkbox" id="draft1">
+                        </div>
+                        <div class="email-info">
+                            <p class="email-recipient">DataTech Solutions (No recipients)</p>
+                            <p class="email-subject">Application for Data Analyst Position</p>
+                            <p class="email-preview">Draft saved on Mar 02, 2025</p>
+                        </div>
+                        <div class="email-actions">
+                            <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="email-item">
+                        <div class="email-checkbox">
+                            <input type="checkbox" id="draft2">
+                        </div>
+                        <div class="email-info">
+                            <p class="email-recipient">No recipients</p>
+                            <p class="email-subject">Internship Application</p>
+                            <p class="email-preview">Draft saved on Feb 27, 2025</p>
+                        </div>
+                        <div class="email-actions">
+                            <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trash Section -->
+            <div class="section hidden" id="trash-section">
+                <h2>Trash</h2>
+                <div class="email-list">
+                    <div class="email-item">
+                        <div class="email-checkbox">
+                            <input type="checkbox" id="trash1">
+                        </div>
+                        <div class="email-info">
+                            <p class="email-recipient">WebDev Inc. (8 recipients)</p>
+                            <p class="email-subject">Web Developer Application</p>
+                            <p class="email-preview">Deleted on Mar 01, 2025</p>
+                        </div>
+                        <div class="email-actions">
+                            <button class="btn-icon"><i class="fas fa-undo"></i></button>
+                            <button class="btn-icon"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="email-item">
+                        <div class="email-checkbox">
+                            <input type="checkbox" id="trash2">
+                        </div>
+                        <div class="email-info">
+                            <p class="email-recipient">Various Companies (15 recipients)</p>
+                            <p class="email-subject">Junior Developer Position</p>
+                            <p class="email-preview">Deleted on Feb 25, 2025</p>
+                        </div>
+                        <div class="email-actions">
+                            <button class="btn-icon"><i class="fas fa-undo"></i></button>
+                            <button class="btn-icon"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- </div> -->
+    </div>
 
-                <script src="script.js"></script>
-            </body>
-        </html>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            Made with <i class="fas fa-heart"></i> by <span>Mayur</span>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 | All rights reserved</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
