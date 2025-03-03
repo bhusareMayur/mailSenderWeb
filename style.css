@@ -408,6 +408,19 @@ textarea.form-control {
     margin: 0 0.5rem;
     animation: heartbeat 1.5s infinite;
 }
+.footer .contact-info{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+/* .footer .contact-info li{
+    list-style: none;
+    width: 100%;
+    margin: 2rem 5rem 2rem 5rem;
+    display: inline-block;
+    justify-content: space-between;
+    align-content: space-between;
+} */
 
 @keyframes heartbeat {
     0% { transform: scale(1); }
